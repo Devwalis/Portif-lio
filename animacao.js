@@ -1,0 +1,1 @@
+animacao ='text/javascript'>document.addEventListener('contact', function () {window.setTimeout(document.querySelector('svg').classList.add('contact'),1000);})
