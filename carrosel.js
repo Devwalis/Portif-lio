@@ -7,14 +7,14 @@ const imagens = [
   {
     id: '1',
     svg: 'application-programming-interface-animate.svg',
-    titulo: 'Ecommerce',
-    descricao: 'Construído com Java e Spring Boot com arquitetura de microsserviços',
+    titulo: 'E-commerce',
+    descricao: 'Construído com Java e Spring Boot com arquitetura de microsserviços um sistema escalável',
   },
   {
     id: '2',
     svg: 'brain-sides-animate(1).svg',
-    titulo: 'E-commerce',
-    descricao: 'Construído com Java e Spring Boot com arquitetura de mic'
+    titulo: 'EnergeConnect',
+    descricao: 'Projetos em andamento: SaaS '
   }
   // Adicione mais imagens aqui...
 ];

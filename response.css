@@ -1,0 +1,20 @@
+/*--------RESPONSIVIDADE-----------*/
+
+@media screen and (max-width: 1274px){
+    .habilidades-box-icon{
+        display: none;
+    }
+   
+       
+    }
+
+    @media screen and (max-width: 1004) {
+        .forma{
+       
+            padding-right: 50px;
+        }
+    }
+
+
+
+
