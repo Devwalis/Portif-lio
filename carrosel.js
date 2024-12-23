@@ -2,70 +2,101 @@ const carrosel = document.querySelector('#carrosel-img-projetos');
 const btnProx = document.querySelector('#btn-prox');
 const btnAnte = document.querySelector('#btn-ante');
 
-// Cria um array com as imagens do carrosel
-const imagens = [
+
+const dadosPersonalizados = [
   {
-    id: '1',
-    svg: 'application-programming-interface-animate.svg',
-    titulo: 'E-commerce',
-    descricao: 'Construído com Java e Spring Boot com arquitetura de microsserviços um sistema escalável',
+    id: 868161423, 
+    svg: 'LogoAmeComo.png', 
+    descricao: 'Ame Como uma criança, um projeto', 
+    link: 'https://ame-uma-crian-a-cdd.vercel.app/', 
   },
   {
-    id: '2',
-    svg: 'brain-sides-animate(1).svg',
-    titulo: 'EnergeConnect',
-    descricao: 'Projetos em andamento: SaaS '
-  }
-  // Adicione mais imagens aqui...
+    id: 891493600, 
+    svg: 'RaizesEdu.svg',
+    descricao: 'Projeto criado no cruso de programador de sistemas no senac',
+    link: 'https://s8m-industrious-cavendish.circumeo-apps.net/',
+  },
+  
 ];
 
-// Função para criar o carrosel
-function criarCarrosel() {
-  const carroselHTML = imagens.map((imagem) => {
+
+async function getProjetos() {
+  const urlGitHub = 'https://api.github.com/users/Devwalis/repos';
+
+  try {
+    const response = await fetch(urlGitHub);
+    if (!response.ok) throw new Error('Erro ao buscar projetos do GitHub');
+
+    const data = await response.json();
+    return data.filter(repo => dadosPersonalizados.some(dado => dado.id === repo.id)).map(repo => {
+      
+      const dadosRepo = dadosPersonalizados.find(dado => dado.id === repo.id);
+      return {
+        id: repo.id,
+        svg: dadosRepo ? dadosRepo.svg : 'default-image.svg', 
+        titulo: repo.name,
+        descricao: dadosRepo ? dadosRepo.descricao : repo.description || 'Descrição não disponível',
+        link: dadosRepo ? dadosRepo.link : repo.html_url,
+      };
+    });
+
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+}
+
+
+async function inicializarCarrosel() {
+  const imagens = await getProjetos();
+  criarCarrosel(imagens);
+  trocarImagem(imagens); 
+
+ 
+  btnProx.addEventListener('click', () => proximo(imagens));
+  btnAnte.addEventListener('click', () => anterior(imagens));
+}
+
+
+function criarCarrosel(imagens) {
+  const carroselHTML = imagens.map(imagem => {
     return `
       <div class="carrosel-img-projetos">
-        <img src="imagem/${imagem.svg}">
+        <img src="imagem/${imagem.svg}" alt="${imagem.titulo}">
         <h3>${imagem.titulo}</h3>
         <p>${imagem.descricao}</p>
-      </div>
-    `;
+        <a href="${imagem.link}" target="_blank">Acessar projeto</a>
+      </div>`;
   }).join('');
-
   carrosel.innerHTML = carroselHTML;
 }
 
-criarCarrosel();
 
-// Variável para controlar a posição atual do carrosel
-let posicaoAtual = 0;
-
-// Função para trocar a imagem do carrosel
-function trocarImagem() {
+function trocarImagem(imagens) {
   const imagensCarrosel = carrosel.querySelectorAll('.carrosel-img-projetos');
   imagensCarrosel.forEach((imagem, index) => {
     if (index === posicaoAtual) {
-      imagem.style.display = 'block';
+      imagem.style.display = 'block'; 
     } else {
-      imagem.style.display = 'none';
+      imagem.style.display = 'none'; 
     }
   });
 }
 
-// Função para avançar para a próxima imagem
-function proximo() {
-  posicaoAtual = (posicaoAtual + 1) % imagens.length;
-  trocarImagem();
+
+let posicaoAtual = 0;
+
+
+function proximo(imagens) {
+  posicaoAtual = (posicaoAtual + 1) % imagens.length; 
+  trocarImagem(imagens); 
 }
 
-// Função para voltar para a imagem anterior
-function anterior() {
-  posicaoAtual = (posicaoAtual - 1 + imagens.length) % imagens.length;
-  trocarImagem();
+
+function anterior(imagens) {
+  posicaoAtual = (posicaoAtual - 1 + imagens.length) % imagens.length; 
+  trocarImagem(imagens); 
 }
 
-// Adiciona eventos aos botões
-btnProx.addEventListener('click', proximo);
-btnAnte.addEventListener('click', anterior);
 
-// Inicializa o carrosel com a primeira imagem
-trocarImagem();
+inicializarCarrosel();
