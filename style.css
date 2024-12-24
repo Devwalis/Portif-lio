@@ -42,6 +42,15 @@ body{
 
 
 }
+
+a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+a:hover{
+    color: #2D7A78;
+}
 .flex{
     display: flex;
    
@@ -427,6 +436,15 @@ section.projetos{
     padding: 4% 40Px;
     
 }
+.projetos h2{
+    font-size: 50px;
+    font-family: var(--fonte-de-escrever);
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+
+
+}
 .projetos .flex{
     display: flex;
     
@@ -449,11 +467,24 @@ section.projetos{
     font-family: var(--fonte-de-leitura);
     letter-spacing: 2px;
 }
+.butons{
+    display: flex;
+    gap: 2rem;
+}
+
 
 .btn-prox-ante{
 gap: 2rem;
 display: flex;
 align-items: center;
+z-index: 9999999;
+  margin: 50px;
+  position: relative;
+  top: 350px;
+  right: 550px;
+  height: 100px;
+  width: 100px;
+
 
 
 }
@@ -473,9 +504,21 @@ align-items: center;
 .carrosel-img-projetos p{
     font-size: 15px;
     font-family: var(--fonte-de-leitura);
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    padding: 10px;
+
+    
     
 
 
+}
+.carrosel-img-projetos button{
+    padding: 5px;
+    background-color: var(--nonary-color);
+    border: none;
+    border-radius: 5px;
+    
 }
 .carrosel-img-projetos h3{
     font-size: 25px;
@@ -751,6 +794,10 @@ footer .line-footer p a{
            font-weight: 500;
          
         }
+        .carrosel-img-projetos a {
+            text-decoration: none;
+        }
+       
         .carrosel-img-projetos{
             padding: 10px 20px;
             margin: 2px solid #fff;
@@ -829,6 +876,12 @@ footer .line-footer{
 }
 footer .line-footer .btn-icon{
     gap: 2rem;
+}
+.btn-icon a{
+    
+    
+
+ 
 }
 }
 

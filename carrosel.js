@@ -5,16 +5,21 @@ const btnAnte = document.querySelector('#btn-ante');
 
 const dadosPersonalizados = [
   {
+    
     id: 868161423, 
+    titulo: 'Ame Como Uma Criança',
     svg: 'LogoAmeComo.png', 
-    descricao: 'Ame Como uma criança, um projeto', 
-    link: 'https://ame-uma-crian-a-cdd.vercel.app/', 
+    descricao:'O projeto web desenvolvido no curso CDD4.0 tem como objetivo causar impacto na mídia social e internet, documentando fotos. Trabalhado em grupo, promove \n colaboração socioemocional, sem fins lucrativos e com foco em ações sociais."', 
+    link: 'https://ame-uma-crian-a-cdd.vercel.app/',
+    link2: 'https://github.com/Devwalis/AmeUmaCrian-aCDD' 
   },
   {
-    id: 891493600, 
-    svg: 'RaizesEdu.svg',
-    descricao: 'Projeto criado no cruso de programador de sistemas no senac',
-    link: 'https://s8m-industrious-cavendish.circumeo-apps.net/',
+    id: 891493600,
+    titulo: 'Raizes da Educação',
+    svg: 'RaizesEdu.png',
+    descricao:'O projeto desenvolvido no SENAC, com Python, HTML, CSS e JavaScript, busca impactar a educação, oferecendo alfabetização gratuita e de qualidade para idosos. Uma ação social que conecta professores, alunos e instituições para melhorar o ensino.',
+    link: 'https://s8m-industrious-cavendish.circumeo-apps.net ',
+    link2:'https://github.com/meloim/raizes-edu'
   },
   
 ];
@@ -32,11 +37,13 @@ async function getProjetos() {
       
       const dadosRepo = dadosPersonalizados.find(dado => dado.id === repo.id);
       return {
+        
         id: repo.id,
         svg: dadosRepo ? dadosRepo.svg : 'default-image.svg', 
-        titulo: repo.name,
+        titulo:dadosRepo ? dadosRepo.titulo : repo.name,
         descricao: dadosRepo ? dadosRepo.descricao : repo.description || 'Descrição não disponível',
         link: dadosRepo ? dadosRepo.link : repo.html_url,
+        link2: dadosRepo ? dadosRepo.link2 : repo.html_url,
       };
     });
 
@@ -65,7 +72,10 @@ function criarCarrosel(imagens) {
         <img src="imagem/${imagem.svg}" alt="${imagem.titulo}">
         <h3>${imagem.titulo}</h3>
         <p>${imagem.descricao}</p>
-        <a href="${imagem.link}" target="_blank">Acessar projeto</a>
+        <div class="butons">
+        <button><a href="${imagem.link}" target="_blank">Acessar projeto</a></button>
+        <button><a href="${imagem.link2}" target="_blank">Acessar repositório</a></button>
+        </div>
       </div>`;
   }).join('');
   carrosel.innerHTML = carroselHTML;
