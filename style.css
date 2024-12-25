@@ -466,10 +466,21 @@ section.projetos{
     color: var(--primary-color);
     font-family: var(--fonte-de-leitura);
     letter-spacing: 2px;
+
 }
 .butons{
     display: flex;
     gap: 2rem;
+    width: 100px;
+}
+.buttons{
+    height: 80px;
+    width: 80px;
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    top:100px 
+
 }
 
 
@@ -513,7 +524,7 @@ z-index: 9999999;
 
 
 }
-.carrosel-img-projetos button{
+.carrosel-img-projetos .passe{
     padding: 5px;
     background-color: var(--nonary-color);
     border: none;
@@ -530,7 +541,7 @@ z-index: 9999999;
 }
 
 .carrosel-img-projetos img{
-    height: 200px;
+ 
     width: 290;
 }
 .img-projeto img{
@@ -786,8 +797,7 @@ footer .line-footer p a{
         
             
         #carrosel-img-projetos img{
-            height: 200px;
-            width: 200px;
+          
         }
         #carrosel-img-projetos p{
            font-size: 1.1rem;
@@ -806,6 +816,8 @@ footer .line-footer p a{
         }
         .btn-prox-ante {
             justify-content:center;
+         
+           
           
         
         }
@@ -829,6 +841,16 @@ footer .line-footer p a{
         }
         .img-fala-comigo{
             padding: 0 20px 20px;
+        }
+
+        .buttons{
+            display: flex;
+            width: 80px;
+            position: relative;
+            right: 160px;
+
+         
+
         }
         .form1{
            padding: 0 20px 20px;
