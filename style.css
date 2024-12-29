@@ -378,6 +378,7 @@ section.habilidades .flex .habilidades-box-text h4{
     color: var(--primary-color);
     font-weight: 600;
     margin-bottom: 50px;
+    font-family: var(--fonte-de-escrever);
     
 
 }
@@ -529,6 +530,7 @@ z-index: 9999999;
     background-color: var(--nonary-color);
     border: none;
     border-radius: 5px;
+    height: 50px;
     
 }
 .carrosel-img-projetos h3{
