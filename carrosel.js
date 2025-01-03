@@ -21,7 +21,7 @@ const dadosPersonalizados = [
       id:911666462,
       titulo: 'Parallax',
       svg: 'logoParallax.png',
-      descricao: 'Praticando CSS3 E HTML5 bucando melhorar uso de desing web',
+      descricao: 'Praticando CSS3 e HTML5 com técnicas de parallax, buscando aprimorar o design web com animações dinâmicas e criativas, melhorando a experiência visual e a usabilidade.',
       link: 'https://devwalis.github.io/paralax/',
       link2: 'https://github.com/Devwalis/Paralax'
 
