@@ -56,8 +56,8 @@ function criarCarrosel(imagens) {
           <button class="passe"><a href="${imagem.link}" target="_blank">Acessar projeto</a></button>
           <button class="passe"><a href="${imagem.link2}" target="_blank">Acessar repositório</a></button>
           <div class="buttons">                    
-            <button class="btn-ante" id="btn-ante"><img src="icons/Frame 38(1).png" alt=""></button>
-            <button id="btn-prox"><img src="icons/Frame 37.png" alt=""></button>
+            <button class="btn-ante" id="btn-ante"><img src="imagem/antes.png" alt=""></button>
+            <button id="btn-prox"><img src="imagem/prox.png" alt=""></button>
           </div>
         </div>
       </div>`;

@@ -417,6 +417,9 @@ section.habilidades .flex .habilidades-box-text h4{
     margin: 10px 0;
     text-align: justify;
     font-family: var(--fonte-de-leitura);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    
 }
 .quemsou .btn-icon img{
     width: 50px;
@@ -500,11 +503,14 @@ z-index: 9999999;
 
 }
 #btn-ante{
-    height: 45px;
+    background-color: #eeeeee00;
+    border: none;
 
 }
 #btn-prox{
-    height: 45px;
+    background-color: #eeeeee00;
+    border: none;
+    
 }
 #btn-prox-ante p{
     color: var(--primary-color);
@@ -716,7 +722,7 @@ footer .line-footer p a{
     /*------HABILIDADES------*/
 
     section.habilidades{
-        height: 240vh;
+        height: 120vh;
         padding: 10px 8%;
        
     }
@@ -763,7 +769,7 @@ footer .line-footer p a{
            section.quemsou{
             
             padding: 40px 4%;
-            height: 130vh;
+            height: 100vh;
             
             
     
@@ -884,12 +890,7 @@ footer .flex{
     
 
 }
-footer{
-    height: 80vh;
-    padding-top: 40vh;
-    
-    
-}
+
 footer .logo-footer{
    padding: 10px 23px;
    gap: 2rem;
