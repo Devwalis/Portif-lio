@@ -934,7 +934,12 @@ footer .line-footer .btn-icon{
 }
 
 /*--------RESPONSIVIDADE-----------*/
+@media screen and (max-width: 412px){
 
+    section.habilidades{
+        height: 140vh;
+    }
+}
 
 
 
