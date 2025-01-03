@@ -17,6 +17,15 @@ const dadosPersonalizados = [
     link: 'https://s8m-industrious-cavendish.circumeo-apps.net ',
     link2:'https://github.com/meloim/raizes-edu'
   },
+    {
+      id:911666462,
+      titulo: 'Parallax',
+      svg: 'logoParallax.png',
+      descricao: 'Praticando CSS3 E HTML5 bucando melhorar uso de desing web',
+      link: 'https://devwalis.github.io/paralax/',
+      link2: 'https://github.com/Devwalis/Paralax'
+
+    }
 ];
 
 async function getProjetos() {
