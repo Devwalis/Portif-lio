@@ -862,7 +862,7 @@ footer .line-footer p a{
         /*------------CONTATO------------*/
         section.contato{
             padding: 40px 4%;
-            height: 80vh;
+            height: 110vh;
             
         }
         .img-fala-comigo img{
@@ -941,7 +941,7 @@ footer .line-footer .btn-icon{
     }
     section.contato{
         padding: 40px 4%;
-        height: 100vh;
+        height: 110vh;
         
     }
 
