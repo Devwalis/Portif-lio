@@ -5,7 +5,7 @@ const dadosPersonalizados = [
     id: 868161423, 
     titulo: 'Ame Como Uma Criança',
     svg: 'LogoAmeComo.png', 
-    descricao:'O projeto web desenvolvido no curso CDD4.0 tem como objetivo causar impacto na mídia social e internet, documentando fotos. Trabalhado em grupo, promove \n colaboração socioemocional, sem fins lucrativos e com foco em ações sociais."', 
+    descricao:'Projeto web do curso CDD4.0 visa impacto social na internet, documentando fotos. Desenvolvido em grupo, promove colaboração socioemocional, sem fins lucrativos e com foco social.', 
     link: 'https://ame-uma-crian-a-cdd.vercel.app/',
     link2: 'https://github.com/Devwalis/AmeUmaCrian-aCDD' 
   },
@@ -13,7 +13,7 @@ const dadosPersonalizados = [
     id: 891493600,
     titulo: 'Raizes da Educação',
     svg: 'RaizesEdu.png',
-    descricao:'O projeto desenvolvido no SENAC, com Python, HTML, CSS e JavaScript, busca impactar a educação, oferecendo alfabetização gratuita e de qualidade para idosos. Uma ação social que conecta professores, alunos e instituições para melhorar o ensino.',
+    descricao:'Projeto no SENAC com Python, HTML, CSS e JavaScript visa alfabetização gratuita para idosos. Conecta professores, alunos e instituições, promovendo educação acessível e de qualidade.',
     link: 'https://s8m-industrious-cavendish.circumeo-apps.net ',
     link2:'https://github.com/meloim/raizes-edu'
   },
