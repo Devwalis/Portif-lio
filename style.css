@@ -804,11 +804,25 @@ footer .line-footer p a{
         
             
         #carrosel-img-projetos img{
+            display: flex;
+            padding: 20px;
+            margin: auto;
+
           
+        }
+      
+        .carrosel-img-projetos h3{
+            font-size: 22px;
+            padding: 10px;
+            text-align: center;
         }
         #carrosel-img-projetos p{
            font-size: 1.1rem;
            font-weight: 500;
+           letter-spacing: 1px;
+           text-align: justify;
+           word-spacing: 0.5px;
+           
          
         }
         .carrosel-img-projetos a {
@@ -816,10 +830,9 @@ footer .line-footer p a{
         }
        
         .carrosel-img-projetos{
-            padding: 10px 20px;
-            margin: 2px solid #fff;
-            margin-right: 2px solid #ffff
-            ;
+            padding: 20px 20px;
+            display: flex;
+            align-items: center;          
         }
         .btn-prox-ante {
             justify-content:center;
@@ -828,6 +841,17 @@ footer .line-footer p a{
           
         
         }
+        .butons{
+            align-items: center;
+           
+            
+        }
+        .buttons{
+            
+            position: relative;
+            right: 100px;
+        }
+
         .img-projeto img{
             width: 250px;
             height: 250px;
